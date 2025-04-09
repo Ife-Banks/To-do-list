@@ -6,8 +6,30 @@
     <title>Document</title>
     <link rel="stylesheet" href="/src/output.css">
 </head>
-<body class="font-body p-3 m-3">
-    <ul id="todo-list" class=" h-max w-full flex flex-col gap-y-2">
+<body class="font-body p-0 m-0">
+    <div class="pt-5 p-2 m-1 bg-gray-100 h-screen flex
+    flex-col gap-y-1 relative"><!--Covering-->
+        <div class=" ">
+            <h1 class="text-stone-600 text-4xl font-semibold flter drop-shadow-md">Get started</h1>
+            <div class="flex gap-x-2 text-gray-400 text-lg font-semibold items-center flter drop-shadow-xs">
+                <span>Create tasks</span>
+                <hr class=" w-2 h-2 bg-gray-400 rounded-full">
+                <span>Set reminder</span>
+                <hr class="w-2 h-2 bg-gray-400 rounded-full">
+                <span>Task progress</span>
+            </div>
+        </div>
+        <img src="./src/img/ill.png" alt="" srcset="" class="object-cover w-full h-130 ">
+        <div class=" absolute inset-x-0 bottom-10 p-1 flex flex-col items-center gap-y-2">
+            <div class="text-lg font-semibold text-amber-500">
+                <a href="">Login</a>
+            </div>
+            <div class="bg-amber-500 w-full p-3 flex justify-center text-white text-xl font-semibold rounded-xl shadow-md shadow-inset-sm">
+                <a href="">Signup</a>
+            </div>
+        </div>
+    </div>
+    <!-- <ul id="todo-list" class=" h-max w-full flex flex-col gap-y-2">
     </ul>
        <div class="m-2">
         <input type="text" id="todo-input" placeholder="Enter your task" class="inpp">
@@ -15,7 +37,7 @@
         <button type="button" class="bg-gray-300 px-2" id="ad-btn">
          Save
         </button>
-       </div>
+       </div> -->
 </body>
 <script src="/index.js"></script>
 </html>
