@@ -8,7 +8,7 @@ document.getElementById('login').addEventListener('click', () => {
         if(Cemal1 == localStorage.getItem('email') && Cpass1 == localStorage.getItem('password')){
             window.location.href='/public/Dashboard.html';
         }else {
-            console.log('Password incorrect, Try again');
+            alert('Password incorrect, Try again');
         }
     }
     console.log(localStorage.length);
