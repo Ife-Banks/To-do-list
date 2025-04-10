@@ -25,3 +25,11 @@
 .span{
     @apply flex flex-col p-1 gap-y-2;
 }
+
+.fade-out {
+    animation: fadeOut 0.5s ease-in-out forwards;
+}
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}

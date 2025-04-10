@@ -1,9 +1,12 @@
 //Addtask
 document.getElementById('ad-btn').addEventListener('click',function(){
 const input = document.getElementById('todo-input');
-taskText = input.value.trim();
+if(input.value !== ''){
+    taskText = input.value.trim();
 const inputDEs = document.getElementById('todo-des');
 des = inputDEs.value.trim();
+}
+
 
 // var text;
 //create items
