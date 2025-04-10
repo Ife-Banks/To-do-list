@@ -1,4 +1,4 @@
-
+//Addtask
 document.getElementById('ad-btn').addEventListener('click',function(){
 const input = document.getElementById('todo-input');
 taskText = input.value.trim();
@@ -20,6 +20,12 @@ saveList(taskText,des);
 console.log(localStorage.getItem('listValue'));
 input.value = " ";
 window.location.href='/public/Dashboard.html'})
+
+function saveList(value,value2){
+    localStorage.setItem('listValue',value);
+    localStorage.setItem('Des',value2)
+
+}
 
 // // // Add delete fxn
 // // const dltbtn= document.createElement('button');
@@ -61,8 +67,3 @@ window.location.href='/public/Dashboard.html'})
 // console.log(localStorage.getItem('listValue'));
 //    })
 
-function saveList(value,value2){
-    localStorage.setItem('listValue',value);
-    localStorage.setItem('Des',value2)
-
-}
