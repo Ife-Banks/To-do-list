@@ -5,21 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body class="font-body p-0 m-1 relative border">
+<link rel="stylesheet" href="/src/output.css">
+<body class="font-body p-0 m-1 relative">
     <div class="pt-5 p-2 m-1 bg-gray-100 h-screen flex
-    flex-col gap-y-1 relative">
-    <div>
-        <div><p></p></div>
-        <div>
-           <div class="w-5"> 
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+    flex-col gap-y-6 relative">
+    <div class="flex justify-between items-center">
+        <div class=" w-13 h-13 flex items-center justify-center text-4xl font-bold rounded-full bg-fuchsia-300/70 text-fuchsia-800 shadow-sm">
+            <p id="FirstLetter" class=""></p>
+        </div>
+        <div class="flex gap-x-5">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
               </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+              </svg>
               
-           </div>
+
               
         </div>
     </div>
+    <div>
+            <h1 id="Usernam" class="font-bold text-3xl"></h1>
+            <p class=" mt-1 text-stone-400 text-md font-semibold items-center">Let'd get Started keeping your task Organized</p>
+        </div>
+
     </div>
 </body>
+<script src="/src/Dashboard.js"></script>
 </html>
