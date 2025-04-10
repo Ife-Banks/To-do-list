@@ -4,11 +4,21 @@
     --font-body: "Nunito", sans-serif;
 }
 .list{
-    @apply w-max border border-gray-400 bg-gray-200 p-1 shadow-sm flex justify-between;
+    @apply h-max m-2 px-1 py-2 bg-white    focus:outline-none rounded-lg flex justify-between border;
 }
 .btn-sty{
     @apply border bg-red-600 text-white px-1 border-red-700 font-semibold rounded-sm;
 }
 .inpp{
     @apply  mt-2 border rounded-md px-2;
+}
+.list-tit{
+    @apply font-bold text-xl;
+}
+
+.bound{
+    @apply border h-max flex flex-col gap-y-1;
+}
+.list-des{
+    @apply mt-1 text-stone-400 text-lg font-semibold items-center;
 }
