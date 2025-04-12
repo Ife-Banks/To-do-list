@@ -14,36 +14,32 @@ document.getElementById('add').addEventListener('click',()=>{
     window.location.href='/public/addTask.html';
 })
 
-const store =JSON.parse(localStorage.getItem('listValue'));
-if(store){
-   const lists = document.getElementById('todo-list');
-   store.forEach((element) => {
+const store =JSON.parse(localStorage.getItem('listValue'))||[];
+const lists = document.getElementById('todo-list');
+lists.innerHTML="";
+store.forEach((element) => {
     const list= document.createElement('li');
     const div = document.createElement('div');
-    const spn =document.createElement('span');
-    text =document.createElement('h1');
-    text2=document.createElement('p');
-
-    text.textContent = element.title;
-    text2.textContent=element.description;
+    // const spn =document.createElement('span');
+    const text =document.createElement('h1');
+    const text2=document.createElement('p');
+    text.textContent = element.title || 'untitled';
+    text2.textContent=element.description||' no des';
 
     div.className = 'bound';
     list.className = 'list';
-    spn.className = 'span';
-
+    // spn.className = 'span';
     text.className='list-tit' 
-     text2.className='list-des';
+    text2.className='list-des';
 
     div.appendChild(text);
-      div.appendChild(text2);
-    // 
+    div.appendChild(text2);
     list.appendChild(div);
  
-    document.getElementById('todo-list').appendChild(list);
+    lists.appendChild(list);
    });
-    
-}
     //create list and text
+    console.log(store.length)
    
     
    

@@ -21,29 +21,24 @@ des = inputDEs.value.trim();
 // return to null
 // console.log(taskText);
 saveList(taskText,des);
-// console.log(localStorage.getItem('listValue'));
 input.value = " ";
 inputDEs.value=" ";
 window.location.href='/public/Dashboard.html';
 })
 
-var arr = [
-]
+var arr = JSON.parse(localStorage.getItem('listValue'))||[]
 
 function saveList(value,value2){
- var a={
-        title:value,
-        description:value2
-     };
-     arr.push(a);
+    
+     arr.push(
+        {
+            title:value,
+            description:value2
+         }
+     );
     localStorage.setItem('listValue',JSON.stringify(arr));
-    var b =JSON.parse(localStorage.getItem('listValue'));
-    console.log(arr.length);
-    for(i=0;i<b.length;i++){
-        console.log(b[i]);
     }
 
-}
 
 
 
