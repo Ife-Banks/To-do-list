@@ -1,13 +1,14 @@
+
+var inputDEs;
 //Addtask
-document.getElementById('ad-btn').addEventListener('click',function(){
+document.getElementById('ad-btn').addEventListener('click',function(e){
+    e.preventDefault();
 const input = document.getElementById('todo-input');
 if(input.value !== ''){
     taskText = input.value.trim();
-const inputDEs = document.getElementById('todo-des');
+ inputDEs = document.getElementById('todo-des');
 des = inputDEs.value.trim();
 }
-
-
 // var text;
 //create items
 // if (input.value !== "" ){
@@ -18,17 +19,34 @@ des = inputDEs.value.trim();
 //     text.textContent = taskText;
 // console.log();}
 // return to null
-console.log(taskText);
+// console.log(taskText);
 saveList(taskText,des);
-console.log(localStorage.getItem('listValue'));
+// console.log(localStorage.getItem('listValue'));
 input.value = " ";
-window.location.href='/public/Dashboard.html'})
+inputDEs.value=" ";
+window.location.href='/public/Dashboard.html';
+})
+
+var arr = [
+]
 
 function saveList(value,value2){
-    localStorage.setItem('listValue',value);
-    localStorage.setItem('Des',value2)
+ var a={
+        title:value,
+        description:value2
+     };
+     arr.push(a);
+    localStorage.setItem('listValue',JSON.stringify(arr));
+    var b =JSON.parse(localStorage.getItem('listValue'));
+    console.log(arr.length);
+    for(i=0;i<b.length;i++){
+        console.log(b[i]);
+    }
 
 }
+
+
+
 
 // // // Add delete fxn
 // // const dltbtn= document.createElement('button');
