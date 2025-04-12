@@ -26,7 +26,7 @@ inputDEs.value=" ";
 window.location.href='/public/Dashboard.html';
 })
 
-var arr = JSON.parse(localStorage.getItem('listValue'))||[]
+    var arr = JSON.parse(localStorage.getItem('listValue'))||[]
 
 function saveList(value,value2){
     
