@@ -20,42 +20,21 @@ lists.innerHTML="";
 store.forEach((element) => {
     const list= document.createElement('li');
     const div = document.createElement('div');
-    // const spn =document.createElement('span');
+    const spn =document.createElement('span');
     const text =document.createElement('h1');
     const text2=document.createElement('p');
     text.textContent = element.title || 'untitled';
     text2.textContent=element.description||' no des';
 
-    div.className = 'bound';
-    list.className = 'list';
-    // spn.className = 'span';
-    text.className='list-tit' 
-    text2.className='list-des';
+        // Add delete fxn
+        const dltbtn= document.createElement('button');
+        dltbtn.className = 'btn-sty';
+        dltbtn.textContent = 'Delete';
+        dltbtn.addEventListener('click', () => {
+            list.remove();
+        })
 
-    div.appendChild(text);
-    div.appendChild(text2);
-    list.appendChild(div);
- 
-    lists.appendChild(list);
-   });
-    //create list and text
-    console.log(store.length)
-   
-    
-   
-     
- 
- 
-    // Add delete fxn
-     const dltbtn= document.createElement('button');
-     dltbtn.className = 'btn-sty';
-     dltbtn.textContent = 'Delete';
-     dltbtn.addEventListener('click', () => {
-         list.remove();
-     })
- 
- 
-    // Modify fxn
+         // Modify fxn
      const modbtn = document.createElement('button');
      modbtn.className='btn-sty';
      modbtn.textContent = 'Modify';
@@ -91,6 +70,33 @@ store.forEach((element) => {
          modbtn.textContent = 'Modify';
         }   // document.getElementById('todo-list').appendChild(inp);
      })
+
+    div.className = 'bound';
+    list.className = 'list';
+     spn.className = 'span';
+    text.className='list-tit' 
+    text2.className='list-des';
+
+    div.appendChild(text);
+    div.appendChild(text2);
+    list.appendChild(div);
+     spn.appendChild(dltbtn);
+     spn.appendChild(modbtn);
+     list.appendChild(spn);
+    lists.appendChild(list);
+   });
+    //create list and text
+    console.log(store.length)
+   
+    
+   
+     
+ 
+ 
+
+ 
+ 
+   
      
       
 console.log(localStorage.key(0));

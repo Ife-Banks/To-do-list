@@ -14,7 +14,7 @@
     @apply font-bold text-xl;
 }
 .list{
-    @apply h-max m-2 px-1 py-2 bg-white    focus:outline-none rounded-lg flex justify-between;
+    @apply h-max m-2 px-1 py-2 bg-white    focus:outline-none rounded-lg flex justify-between shadow-md;
 }
 .bound{
     @apply h-max flex flex-col gap-y-1 p-1;
